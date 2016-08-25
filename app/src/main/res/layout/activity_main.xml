@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.aleksandrabramovski.exchangewebconnect.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Rate"
+        android:id="@+id/button"
+        android:onClick="OnClickGetRate"
+        android:layout_below="@+id/textViewIndex"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCurrency"
+        android:textSize="25dp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:hint="Rate:" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewIndex"
+        android:height="35dp"
+        android:textSize="25dp"
+        android:hint="Index:"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDate"
+        android:layout_below="@+id/textViewCurrency"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInputValue"
+        android:layout_below="@+id/textViewDate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextInputValue"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="top|left"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In US Dollars"
+            android:id="@+id/radioButtonRUBtoUSD"
+            android:checked="false"
+            android:layout_below="@+id/radioButtonUSDtoRUB"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Russian Roubles"
+            android:id="@+id/radioButtonUSDtoRUB"
+            android:checked="true"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentStart="true" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:id="@+id/textViewResultCurrencyExchange"
+        android:layout_marginTop="84dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change"
+        android:onClick="onClickChange"
+        android:id="@+id/buttonChange"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp" />
+
+
+
+
+</RelativeLayout>
